@@ -143,6 +143,33 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
+Prof.o: Prof.cpp.o
+
+.PHONY : Prof.o
+
+# target to build an object file
+Prof.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Prof.cpp.o
+.PHONY : Prof.cpp.o
+
+Prof.i: Prof.cpp.i
+
+.PHONY : Prof.i
+
+# target to preprocess a source file
+Prof.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Prof.cpp.i
+.PHONY : Prof.cpp.i
+
+Prof.s: Prof.cpp.s
+
+.PHONY : Prof.s
+
+# target to generate assembly for a file
+Prof.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Prof.cpp.s
+.PHONY : Prof.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
+	@echo "... Prof.o"
+	@echo "... Prof.i"
+	@echo "... Prof.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

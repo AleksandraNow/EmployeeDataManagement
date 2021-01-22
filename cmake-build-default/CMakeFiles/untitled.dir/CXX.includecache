@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/linux-user/CLionProjects/untitled/Prof.cpp
+Prof.h
+/home/linux-user/CLionProjects/untitled/Prof.h
+
+/home/linux-user/CLionProjects/untitled/Prof.h
+
 /home/linux-user/CLionProjects/untitled/main.cpp
 iostream
 -
@@ -17,4 +23,6 @@ fstream
 -
 algorithm
 -
+Prof.h
+/home/linux-user/CLionProjects/untitled/Prof.h
 

@@ -3,14 +3,11 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
+#include "Prof.h"
 
 
 using namespace std;
 
-enum Prof {
-    architect = 0,
-    seller = 1
-};
 
 
 class Employee {
