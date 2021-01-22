@@ -4,97 +4,13 @@
 #include <fstream>
 #include <algorithm>
 #include "Prof.h"
+#include "Employee.h"
 
 
 using namespace std;
 
 
 
-class Employee {
-private:
-    int id;
-    std::string name;
-    int salary;
-    int seniority;
-    Prof professsion;
-
-public:
-    Employee(int id, std::string name, int salary, int seniority, Prof professsion);
-
-    void setId(int id);
-
-    void setName(const string &name);
-
-    int getSalary() const;
-
-    void setSalary(int salary);
-
-    int getSeniority() const;
-
-    void setSeniority(int seniority);
-
-    Prof getProfesssion() const;
-
-    void setProfesssion(Prof professsion);
-
-    int getId() const;
-
-    string getName();
-};
-
-
-Employee::Employee(int id, std::string name, int salary, int seniority, Prof professsion) {
-    this->id = id;
-    this->name = name;
-    this->salary = salary;
-    this->seniority = seniority;
-    this->professsion = professsion;
-
-}
-
-void Employee::setId(int id) {
-    Employee::id = id;
-}
-
-void Employee::setName(const string &name) {
-    Employee::name = name;
-}
-
-int Employee::getSalary() const {
-    return salary;
-}
-
-int Employee::getId() const {
-    return id;
-}
-
-void Employee::setSalary(int salary) {
-    Employee::salary = salary;
-}
-
-int Employee::getSeniority() const {
-    return seniority;
-}
-
-void Employee::setSeniority(int seniority) {
-    Employee::seniority = seniority;
-}
-
-Prof Employee::getProfesssion() const {
-    return professsion;
-}
-
-void Employee::setProfesssion(Prof professsion) {
-    Employee::professsion = professsion;
-}
-
-string Employee::getName() {
-    return name;
-}
-
-bool comp(const Employee &l, const Employee &r) {
-    return l.getId() < r.getId();
-}
 
 
 class EmployeeList {
@@ -247,7 +163,7 @@ void EmployeeList::load(std::string path) {
 
 
 }
-
+/*
 void EmployeeList::sortEmp() {
     for (auto &element : vector) {
         sort(vector.begin(), vector.end(), comp);
@@ -258,7 +174,7 @@ void EmployeeList::sortEmp() {
     sort(vector.begin(), vector.end(), comp);
 }
 
-
+*/
 int main() {
     cout << "test" << endl;
 
@@ -283,9 +199,7 @@ int main() {
 
     string path;
     cin >> ch;
-    do {
 
-        cout << "\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@";
 
 
         switch (ch) {
@@ -330,8 +244,9 @@ int main() {
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayBelowSalary(salary);
-            case 7:
+            /*case 7:
                 lista.sortEmp();
+                */
             case 8:
                 cout << "Path do save data: ";
                 cin >> path;
@@ -341,12 +256,12 @@ int main() {
                 cout << "test";
 
         }
-    } while (ch != 8);
-
-    return 0;
+    };
 
 
-};
+
+
+
 
 
 

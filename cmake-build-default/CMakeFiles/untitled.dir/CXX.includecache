@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/linux-user/CLionProjects/untitled/Prof.cpp
+/home/linux-user/CLionProjects/untitled/Employee.h
+string
+-
 Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
 
@@ -25,4 +27,6 @@ algorithm
 -
 Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
 
