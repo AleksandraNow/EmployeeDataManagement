@@ -90,6 +90,12 @@
 		<Unit filename="/home/linux-user/CLionProjects/untitled/Employee.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/home/linux-user/CLionProjects/untitled/EmployeeList.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/linux-user/CLionProjects/untitled/EmployeeList.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/home/linux-user/CLionProjects/untitled/Prof.cpp">
 			<Option target="untitled"/>
 		</Unit>

@@ -12,6 +12,20 @@ string
 Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
 
+/home/linux-user/CLionProjects/untitled/EmployeeList.cpp
+iostream
+-
+fstream
+-
+EmployeeList.h
+/home/linux-user/CLionProjects/untitled/EmployeeList.h
+
+/home/linux-user/CLionProjects/untitled/EmployeeList.h
+vector
+-
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
+
 /home/linux-user/CLionProjects/untitled/Prof.h
 
 /home/linux-user/CLionProjects/untitled/main.cpp
@@ -29,4 +43,6 @@ Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
 Employee.h
 /home/linux-user/CLionProjects/untitled/Employee.h
+EmployeeList.h
+/home/linux-user/CLionProjects/untitled/EmployeeList.h
 

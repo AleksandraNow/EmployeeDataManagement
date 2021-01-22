@@ -170,6 +170,33 @@ Employee.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Employee.cpp.s
 .PHONY : Employee.cpp.s
 
+EmployeeList.o: EmployeeList.cpp.o
+
+.PHONY : EmployeeList.o
+
+# target to build an object file
+EmployeeList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/EmployeeList.cpp.o
+.PHONY : EmployeeList.cpp.o
+
+EmployeeList.i: EmployeeList.cpp.i
+
+.PHONY : EmployeeList.i
+
+# target to preprocess a source file
+EmployeeList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/EmployeeList.cpp.i
+.PHONY : EmployeeList.cpp.i
+
+EmployeeList.s: EmployeeList.cpp.s
+
+.PHONY : EmployeeList.s
+
+# target to generate assembly for a file
+EmployeeList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/EmployeeList.cpp.s
+.PHONY : EmployeeList.cpp.s
+
 Prof.o: Prof.cpp.o
 
 .PHONY : Prof.o
@@ -236,6 +263,9 @@ help:
 	@echo "... Employee.o"
 	@echo "... Employee.i"
 	@echo "... Employee.s"
+	@echo "... EmployeeList.o"
+	@echo "... EmployeeList.i"
+	@echo "... EmployeeList.s"
 	@echo "... Prof.o"
 	@echo "... Prof.i"
 	@echo "... Prof.s"
