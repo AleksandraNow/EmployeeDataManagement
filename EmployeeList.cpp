@@ -130,3 +130,17 @@ void EmployeeList::load(std::string path) {
 
 
 }
+
+
+/*
+void EmployeeList::sortEmp() {
+    for (auto &element : vector) {
+        sort(vector.begin(), vector.end(), comp);
+        int id = element.getId();
+        std::string name = element.getName();
+        std::cout << id << " " << name << std::endl;
+    }
+    sort(vector.begin(), vector.end(), comp);
+}
+
+*/

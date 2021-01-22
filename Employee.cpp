@@ -54,6 +54,8 @@ std::string Employee::getName() {
     return name;
 }
 
+/*
 bool comp(const Employee &l, const Employee &r) {
     return l.getId() < r.getId();
 }
+*/
