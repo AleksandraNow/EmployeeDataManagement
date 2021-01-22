@@ -267,9 +267,9 @@ int main() {
 
     int ch;
     EmployeeList lista;
-    Employee emp = *new Employee(9, "okl", 120, 15, Prof(0));
-    Employee wx = *new Employee(10, "asd", 12, 7, Prof(0));
-    Employee gtf = *new Employee(1, "nm", 1200, 15, Prof(0));
+    Employee emp = *new Employee(1, "ola", 12, 15, Prof(0));
+    Employee wx = *new Employee(1, "ola", 12, 15, Prof(0));
+    Employee gtf = *new Employee(1, "ola", 12, 15, Prof(0));
 
     lista.add(emp);
     lista.add(wx);
@@ -286,6 +286,9 @@ int main() {
 
     string path;
     cin >> ch;
+    do {
+
+        cout << "\t@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@";
 
 
         switch (ch) {
@@ -316,7 +319,6 @@ int main() {
 
             case 3:
                 lista.deleteEmp(1);
-                lista.display();
                 break;
             case 4:
                 cout << "name: ";
@@ -327,37 +329,24 @@ int main() {
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayAboveSalary(salary);
-                break;
             case 6:
-                cout << "id: ";
-                cin >> id;
-                cout << "seniority: ";
-                cin >> seniority;
-                lista.edit(id, seniority);
-                break;
-            case 8:
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayBelowSalary(salary);
-                break;
-            case 9:
+            case 7:
                 lista.sortEmp();
-                break;
-            case 10:
+            case 8:
                 cout << "Path do save data: ";
                 cin >> path;
                 lista.saveToFile(path);
                 break;
-            case 11:
-                cout << "Path do read data: ";
-                cin >> path;
-                lista.load(path);
-                break;
-
+            default:
+                cout << "test";
 
         }
+    } while (ch != 8);
 
-
+    return 0;
 
 
 };
