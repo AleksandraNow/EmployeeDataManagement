@@ -226,7 +226,8 @@ void EmployeeList::saveToFile(std::string path) {
     }
 
     for (auto &element : vector) {
-        if (!(out << element.getId() << " " << element.getName() << " " << element.getSalary() << " " << element.getSeniority() << " " << element.getProfesssion() <<  "\n")) {
+        if (!(out << element.getId() << " " << element.getName() << " " << element.getSalary() << " "
+                  << element.getSeniority() << " " << element.getProfesssion() << "\n")) {
             return;
         }
     }
@@ -266,6 +267,14 @@ int main() {
 
     int ch;
     EmployeeList lista;
+    Employee emp = *new Employee(9, "okl", 120, 15, Prof(0));
+    Employee wx = *new Employee(10, "asd", 12, 7, Prof(0));
+    Employee gtf = *new Employee(1, "nm", 1200, 15, Prof(0));
+
+    lista.add(emp);
+    lista.add(wx);
+    lista.add(gtf);
+
     int id;
     std::string name;
     int salary;
@@ -276,90 +285,78 @@ int main() {
     string readPath;
 
     string path;
-
-
-    do {
-
-        int num;
-        cout << "\n\n\t1.Add employee";
-        cout << "\n\n\t2.Display employees";
-        cout << "\n\n\t3.Edit employee";
-        cout << "\n\n\t4.Delete employee";
-        cout << "\n\n\t5.Search employee base on ID";
-        cout << "\n\n\t6.Display employee above salary: ";
-        cout << "\n\n\t7.Display employee below salary: ";
-        cout << "\n\n\t8.Sort employee based on name";
-        cout << "\n\n\t9. Save data to file";
-        cout << "\n\n\t10.Read data from file";
-        cout << "\n\n\t11. Exit";
-        cout << "\n\n\tPlease Enter Your Choice (1-11): ";
-        cin >> ch;
+    cin >> ch;
 
 
         switch (ch) {
-            case '1':
-                Employee *emp;
+            case 1:
+/*
                 cout << "ID: ";
                 cin >> id;
-                emp->setId(id);
+
                 cout << "name: ";
                 cin >> name;
-                emp->setName(name);
+
                 cout << "salary: ";
                 cin >> salary;
-                emp->setSalary(salary);
+
                 cout << "seniority: ";
                 cin >> seniority;
-                emp->setSeniority(seniority);
+
                 cout << "professsion: ";
                 cin >> prof;
-                emp->setProfesssion(static_cast<Prof>(prof));
+                // Employee emp = *new Employee(id,name,salary,seniority, Prof(prof) );
 
 
-                emp = new Employee(id, name, salary, seniority, (Prof)prof);
-                lista.add(*emp);
-
-
-            case '2' :
+                //lista.add(emp);
+                */
+            case 2:
                 lista.display();
-            case'3':
-                cout << "id: ";
-                cin >> id;
-                cout << "seniority change to : ";
-                cin >> number;
-                lista.edit(id, number);
+                break;
 
-
-            case '4' :
-                cout << "index: ";
-                cin >> index;
-                lista.deleteEmp(id);
-            case'5':
+            case 3:
+                lista.deleteEmp(1);
+                lista.display();
+                break;
+            case 4:
                 cout << "name: ";
                 cin >> name;
                 lista.displayChar(name);
-            case '6':
+                break;
+            case 5:
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayAboveSalary(salary);
-            case '7':
+                break;
+            case 6:
+                cout << "id: ";
+                cin >> id;
+                cout << "seniority: ";
+                cin >> seniority;
+                lista.edit(id, seniority);
+                break;
+            case 8:
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayBelowSalary(salary);
-            case '8':
+                break;
+            case 9:
                 lista.sortEmp();
-            case'9' :
+                break;
+            case 10:
                 cout << "Path do save data: ";
                 cin >> path;
                 lista.saveToFile(path);
                 break;
-            default:
-                cout << "test";
+            case 11:
+                cout << "Path do read data: ";
+                cin >> path;
+                lista.load(path);
+                break;
+
+
         }
 
-    } while (ch != '9');
-
-    return 0;
 
 
 
