@@ -24,9 +24,9 @@ int main() {
     Employee wx = *new Employee(1, "ola", 12, 15, Prof(0));
     Employee gtf = *new Employee(1, "ola", 12, 15, Prof(0));
 
-    lista.add(emp);
-    lista.add(wx);
-    lista.add(gtf);
+    lista.addEmployee(emp);
+    lista.addEmployee(wx);
+    lista.addEmployee(gtf);
 
     int id;
     std::string name;
@@ -65,32 +65,32 @@ int main() {
                 //lista.add(emp);
                 */
             case 2:
-                lista.display();
+                lista.displayEmployee();
                 break;
 
             case 3:
-                lista.deleteEmp(1);
+                lista.deleteEmployee(1);
                 break;
             case 4:
                 cout << "name: ";
                 cin >> name;
-                lista.displayChar(name);
+                lista.displayEmployeeByCharacter(name);
                 break;
             case 5:
                 cout << "salary: ";
                 cin >> salary;
-                lista.displayAboveSalary(salary);
+                lista.displayEmployeeAboveSalary(salary);
             case 6:
                 cout << "salary: ";
                 cin >> salary;
-                lista.displayBelowSalary(salary);
+                lista.displayEmployeeBelowSalary(salary);
             /*case 7:
                 lista.sortEmp();
                 */
             case 8:
                 cout << "Path do save data: ";
                 cin >> path;
-                lista.saveToFile(path);
+                lista.saveDataToFile(path);
                 break;
             default:
                 cout << "test";

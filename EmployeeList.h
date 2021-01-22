@@ -13,26 +13,26 @@ class EmployeeList {
 public:
     std::vector<Employee> vector;
 
-    void add(Employee e);
+    void addEmployee(Employee e);
 
-    void display();
+    void displayEmployee();
 
-    void deleteEmp(int number);
+    void deleteEmployee(int number);
 
-    void saveToFile(std::__cxx11::string path);
+    void saveDataToFile(std::__cxx11::string path);
 
-    void load(std::__cxx11::string path);
+    void readDataFromFile(std::__cxx11::string path);
 
-    void displayAboveSalary(int number);
+    void displayEmployeeAboveSalary(int number);
 
-    void displayBelowSalary(int number);
+    void displayEmployeeBelowSalary(int number);
 
-    void displayChar(std::string name);
+    void displayEmployeeByCharacter(std::string name);
 
     void sortEmp();
 
 
-    void edit(int a, int b);
+    void editEmployee(int a, int b);
 };
 
 

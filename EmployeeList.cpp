@@ -9,12 +9,12 @@
 
 
 //dodanie pracownika
-void EmployeeList::add(Employee e) {
+void EmployeeList::addEmployee(Employee e) {
     vector.push_back(e);
 }
 
 //wyswietelnie listy
-void EmployeeList::display() {
+void EmployeeList::displayEmployee() {
     for (auto &element : vector) {
         int id = element.getId();
         int salary = element.getSalary();
@@ -27,7 +27,7 @@ void EmployeeList::display() {
 }
 
 
-void EmployeeList::edit(int a, int b) {
+void EmployeeList::editEmployee(int a, int b) {
     for (auto &element : vector) {
         if (element.getId() == a) {
             element.setSeniority(b);
@@ -43,7 +43,7 @@ void EmployeeList::edit(int a, int b) {
 }
 
 //wyswietlenie powyzej sal
-void EmployeeList::displayAboveSalary(int number) {
+void EmployeeList::displayEmployeeAboveSalary(int number) {
     for (auto &element : vector) {
         if (element.getSalary() > number) {
             int id = element.getId();
@@ -60,7 +60,7 @@ void EmployeeList::displayAboveSalary(int number) {
 
 
 //wyswietlenie ponizej sal
-void EmployeeList::displayBelowSalary(int number) {
+void EmployeeList::displayEmployeeBelowSalary(int number) {
     for (auto &element : vector) {
         if (element.getSalary() < number) {
             int id = element.getId();
@@ -76,7 +76,7 @@ void EmployeeList::displayBelowSalary(int number) {
 }
 
 //na podst okres cechy
-void EmployeeList::displayChar(std::string name) {
+void EmployeeList::displayEmployeeByCharacter(std::string name) {
     for (auto &element : vector) {
         if (element.getName() == name) {
             int id = element.getId();
@@ -92,7 +92,7 @@ void EmployeeList::displayChar(std::string name) {
 }
 
 //usuwanie pracownika
-void EmployeeList::deleteEmp(int number) {
+void EmployeeList::deleteEmployee(int number) {
     if (number >= vector.size()) {
         return;
     }
@@ -100,7 +100,7 @@ void EmployeeList::deleteEmp(int number) {
 }
 
 //zapis do pliku
-void EmployeeList::saveToFile(std::string path) {
+void EmployeeList::saveDataToFile(std::string path) {
     std::ofstream out;
     out.open(path, std::ios::out);
     if (!out.is_open()) {
@@ -117,7 +117,7 @@ void EmployeeList::saveToFile(std::string path) {
 }
 
 //odczyt z pliku
-void EmployeeList::load(std::string path) {
+void EmployeeList::readDataFromFile(std::string path) {
     int a, b;
     std::ifstream odczyt(path);
 
