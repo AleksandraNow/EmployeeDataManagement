@@ -34,11 +34,14 @@ public:
 
     Prof getProfesssion() const;
 
-    void setProfesssion(Prof professsion);
 
     int getId() const;
 
     std::string getName();
+
+    void setProfesssion(Prof professsion);
+
+    bool comp(const Employee &l, const Employee &r);
 };
 
 

@@ -5,6 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include "EmployeeList.h"
+#include "Employee.h"
+
 
 //dodanie pracownika
 void EmployeeList::add(Employee e) {
@@ -135,7 +137,7 @@ void EmployeeList::load(std::string path) {
 /*
 void EmployeeList::sortEmp() {
     for (auto &element : vector) {
-        sort(vector.begin(), vector.end(), comp);
+        sort(vector.begin(), vector.end(), Employee::comp());
         int id = element.getId();
         std::string name = element.getName();
         std::cout << id << " " << name << std::endl;

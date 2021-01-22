@@ -19,6 +19,8 @@ fstream
 -
 EmployeeList.h
 /home/linux-user/CLionProjects/untitled/EmployeeList.h
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
 
 /home/linux-user/CLionProjects/untitled/EmployeeList.h
 vector
@@ -27,22 +29,4 @@ Employee.h
 /home/linux-user/CLionProjects/untitled/Employee.h
 
 /home/linux-user/CLionProjects/untitled/Prof.h
-
-/home/linux-user/CLionProjects/untitled/main.cpp
-iostream
--
-string
--
-vector
--
-fstream
--
-algorithm
--
-Prof.h
-/home/linux-user/CLionProjects/untitled/Prof.h
-Employee.h
-/home/linux-user/CLionProjects/untitled/Employee.h
-EmployeeList.h
-/home/linux-user/CLionProjects/untitled/EmployeeList.h
 
