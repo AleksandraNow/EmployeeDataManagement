@@ -33,6 +33,8 @@ public:
 
 
     void editEmployee(int a, int b);
+
+    void add(Employee employee);
 };
 
 

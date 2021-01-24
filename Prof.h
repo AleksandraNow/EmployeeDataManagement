@@ -6,11 +6,11 @@
 #define UNTITLED_PROF_H
 
 
+#include <type_traits>
+
 enum Prof {
-    architect = 0,
-    seller = 1
+    architect,
+    seller
 };
-
-
 
 #endif //UNTITLED_PROF_H

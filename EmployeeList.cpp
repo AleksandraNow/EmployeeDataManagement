@@ -133,6 +133,10 @@ void EmployeeList::readDataFromFile(std::string path) {
 
 }
 
+void EmployeeList::add(Employee employee) {
+
+}
+
 
 /*
 void EmployeeList::sortEmp() {
