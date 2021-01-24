@@ -11,41 +11,15 @@
 using namespace std;
 
 int main() {
-    cout << "test" << endl;
-
-    Prof prof_arch = architect;
-    Prof prof_sell = seller;
-
-    int ch;
     EmployeeList lista;
-    Employee asd = *new Employee(1, "ola", 12, 15, Prof(0));
-    Employee wx = *new Employee(1, "ola", 12, 15, seller);
-    Employee gtf = *new Employee(1, "basia", 12, 15, architect);
-
-    
-
-
-    lista.addEmployee(wx);
-    lista.addEmployee(gtf);
-    lista.displayEmployee();
-
-    /*
-    //lista.addEmployee(emp);
-    lista.addEmployee(wx);
-    lista.addEmployee(gtf);
 
     int id;
-    std::string name;
+    string name;
     int salary;
     int seniority;
     int prof;
-    int number;
-    int index;
     string readPath;
-
     string path;
-
-
     int choice;
 
     do {
@@ -61,7 +35,7 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            case 1:
+            case 1: {
 
                 cout << "ID: ";
                 cin >> id;
@@ -78,11 +52,12 @@ int main() {
                 cout << "professsion: ";
                 cin >> prof;
 
+                Employee emp(id, name, salary, seniority, Prof(prof));
 
+                lista.addEmployee(emp);
+                break;
 
-                //Employee gtf = *new Employee(1, "ola", 12, 15, Prof(0));
-
-                lista.add(gtf);
+            }
 
             case 2:
                 lista.displayEmployee();
@@ -100,13 +75,15 @@ int main() {
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayEmployeeAboveSalary(salary);
+                break;
             case 6:
                 cout << "salary: ";
                 cin >> salary;
                 lista.displayEmployeeBelowSalary(salary);
+                break;
                 /*case 7:
                     lista.sortEmp();
-
+*/
             case 8:
                 cout << "Path do save data: ";
                 cin >> path;
@@ -122,7 +99,7 @@ int main() {
 
         }
     } while (choice != 10);
-*/
+
 };
 
 
