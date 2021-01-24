@@ -23,15 +23,17 @@ int main() {
     int choice;
 
     do {
-        cout << "\n\n\t2.DISPLAY ALL EMPLOYEES";
-        cout << "\n\n\t3.DELETE EMPLOYEE RECORD";
-        cout << "\n\n\t4.DISPLAY THE EMPLOYEE WHO HAS THE NAME";
-        cout << "\n\n\t5.DISPLAY THE EMPLOYEE ABOVE SALARY";
-        cout << "\n\n\t6.DISPLAY THE EMPLOYEE BELOW SALARY";
-        cout << "\n\n\t8.SAVE DATA TO FILE";
-        cout << "\n\n\t9.READ DATA FROM FILE";
-        cout << "\n\n\t10.EXIT";
-        cout << "\n\n\tPlease Enter Your Choice (1-10): ";
+        cout << "\n\t1.ADD EMPLOYEE";
+        cout << "\n\t2.DISPLAY ALL EMPLOYEES";
+        cout << "\n\t3.DELETE EMPLOYEE RECORD";
+        cout << "\n\t4.DISPLAY THE EMPLOYEE WHO HAS THE NAME";
+        cout << "\n\t5.DISPLAY THE EMPLOYEE ABOVE SALARY";
+        cout << "\n\t6.DISPLAY THE EMPLOYEE BELOW SALARY";
+        cout << "\n\t8.SAVE DATA TO FILE";
+        cout << "\n\t9.READ DATA FROM FILE";
+        cout << "\n\t10.EDIT EMPLOYEE";
+        cout << "\n\t11.EXIT";
+        cout << "\n\tPlease Enter Your Choice (1-10): ";
         cin >> choice;
 
         switch (choice) {
@@ -94,11 +96,19 @@ int main() {
                 cin >> path;
                 lista.readDataFromFile(path);
                 break;
+            case 10:
+                cout << "Edit employee seniority: ";
+                cout << "Id employee: ";
+                cin >> id;
+                cout << "change seniority to ";
+                cin >> seniority;
+                lista.editEmployee(id, seniority);
+                break;
             default:
                 cout << "test";
 
         }
-    } while (choice != 10);
+    } while (choice != 11);
 
 };
 
