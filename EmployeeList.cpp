@@ -7,6 +7,8 @@
 #include "EmployeeList.h"
 #include "Employee.h"
 
+using namespace std;
+
 
 //dodanie pracownika
 void EmployeeList::addEmployee(Employee e) {
@@ -15,15 +17,22 @@ void EmployeeList::addEmployee(Employee e) {
 
 //wyswietelnie listy
 void EmployeeList::displayEmployee() {
+    ProfMap employeeMap;
+    employeeMap.insert(ProfMap::value_type(architect, "architect"));
+    employeeMap.insert(ProfMap::value_type(seller, "seller"));
+
     for (auto &element : vector) {
         int id = element.getId();
         int salary = element.getSalary();
         int seniority = element.getSeniority();
         Prof profession = element.getProfesssion();
         std::string name = element.getName();
-        std::cout << "id: " << id << " name: " << name << " salary: " << salary << " profession:" << profession
+        std::cout << "id: " << id << " name: " << name << " salary: " << salary << " profession:"
+                  << employeeMap[profession]
                   << " seniority: " << seniority << std::endl;
     }
+
+
 }
 
 
@@ -44,6 +53,10 @@ void EmployeeList::editEmployee(int a, int b) {
 
 //wyswietlenie powyzej sal
 void EmployeeList::displayEmployeeAboveSalary(int number) {
+    ProfMap employeeMap;
+    employeeMap.insert(ProfMap::value_type(architect, "architect"));
+    employeeMap.insert(ProfMap::value_type(seller, "seller"));
+
     for (auto &element : vector) {
         if (element.getSalary() > number) {
             int id = element.getId();
@@ -130,10 +143,6 @@ void EmployeeList::readDataFromFile(std::string path) {
     } else
         std::cout << "Nie udało się otworzyć pliku";
 
-
-}
-
-void EmployeeList::add(Employee employee) {
 
 }
 

@@ -13,25 +13,21 @@ using namespace std;
 int main() {
     cout << "test" << endl;
 
+    Prof prof_arch = architect;
+    Prof prof_sell = seller;
+
     int ch;
     EmployeeList lista;
     Employee asd = *new Employee(1, "ola", 12, 15, Prof(0));
     Employee wx = *new Employee(1, "ola", 12, 15, seller);
     Employee gtf = *new Employee(1, "basia", 12, 15, architect);
 
-
-    typedef std::map<Prof, std::string> ProfMap;
-
-    ProfMap m;
-
-    m.insert(ProfMap::value_type(architect, "architect"));
-    m.insert(ProfMap::value_type(seller, "architect"));
-
-    Prof error = architect;
-
-    cout << m[error];
+    
 
 
+    lista.addEmployee(wx);
+    lista.addEmployee(gtf);
+    lista.displayEmployee();
 
     /*
     //lista.addEmployee(emp);

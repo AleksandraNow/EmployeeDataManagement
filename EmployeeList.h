@@ -34,7 +34,8 @@ public:
 
     void editEmployee(int a, int b);
 
-    void add(Employee employee);
+
+    typedef std::map<Prof, std::string> ProfMap;
 };
 
 

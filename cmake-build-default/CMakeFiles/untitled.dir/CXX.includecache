@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/linux-user/CLionProjects/untitled/Employee.cpp
-Employee.h
-/home/linux-user/CLionProjects/untitled/Employee.h
-
 /home/linux-user/CLionProjects/untitled/Employee.h
 string
 -
@@ -32,10 +28,6 @@ vector
 Employee.h
 /home/linux-user/CLionProjects/untitled/Employee.h
 
-/home/linux-user/CLionProjects/untitled/Prof.cpp
-Prof.h
-/home/linux-user/CLionProjects/untitled/Prof.h
-
 /home/linux-user/CLionProjects/untitled/Prof.h
 type_traits
 -
@@ -45,22 +37,4 @@ map
 -
 string
 -
-
-/home/linux-user/CLionProjects/untitled/main.cpp
-iostream
--
-string
--
-vector
--
-fstream
--
-algorithm
--
-Prof.h
-/home/linux-user/CLionProjects/untitled/Prof.h
-Employee.h
-/home/linux-user/CLionProjects/untitled/Employee.h
-EmployeeList.h
-/home/linux-user/CLionProjects/untitled/EmployeeList.h
 
