@@ -7,10 +7,14 @@
 
 
 #include <type_traits>
+#include <ostream>
+#include <map>
+#include <string>
 
 enum Prof {
-    architect,
-    seller
+    architect = 0,
+    seller = 1
 };
+
 
 #endif //UNTITLED_PROF_H

@@ -20,7 +20,20 @@ int main() {
     Employee gtf = *new Employee(1, "basia", 12, 15, architect);
 
 
+    typedef std::map<Prof, std::string> ProfMap;
 
+    ProfMap m;
+
+    m.insert(ProfMap::value_type(architect, "architect"));
+    m.insert(ProfMap::value_type(seller, "architect"));
+
+    Prof error = architect;
+
+    cout << m[error];
+
+
+
+    /*
     //lista.addEmployee(emp);
     lista.addEmployee(wx);
     lista.addEmployee(gtf);
@@ -97,7 +110,7 @@ int main() {
                 lista.displayEmployeeBelowSalary(salary);
                 /*case 7:
                     lista.sortEmp();
-                    */
+
             case 8:
                 cout << "Path do save data: ";
                 cin >> path;
@@ -113,7 +126,7 @@ int main() {
 
         }
     } while (choice != 10);
-
+*/
 };
 
 

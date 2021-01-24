@@ -6,11 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/home/linux-user/CLionProjects/untitled/Employee.cpp
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
+
 /home/linux-user/CLionProjects/untitled/Employee.h
 string
 -
 Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
+
+/home/linux-user/CLionProjects/untitled/EmployeeList.cpp
+iostream
+-
+fstream
+-
+EmployeeList.h
+/home/linux-user/CLionProjects/untitled/EmployeeList.h
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
 
 /home/linux-user/CLionProjects/untitled/EmployeeList.h
 vector
@@ -18,8 +32,18 @@ vector
 Employee.h
 /home/linux-user/CLionProjects/untitled/Employee.h
 
+/home/linux-user/CLionProjects/untitled/Prof.cpp
+Prof.h
+/home/linux-user/CLionProjects/untitled/Prof.h
+
 /home/linux-user/CLionProjects/untitled/Prof.h
 type_traits
+-
+ostream
+-
+map
+-
+string
 -
 
 /home/linux-user/CLionProjects/untitled/main.cpp
