@@ -20,13 +20,7 @@ private:
 public:
     Employee(int id, std::string name, int salary, int seniority, Prof professsion);
 
-    void setId(int id);
-
-    void setName(const std::string &name);
-
     int getSalary() const;
-
-    void setSalary(int salary);
 
     int getSeniority() const;
 
@@ -34,15 +28,26 @@ public:
 
     Prof getProfesssion() const;
 
-
     int getId() const;
 
-    std::string getName();
+    std::string getName() const;
 
     void setProfesssion(Prof professsion);
 
-    bool comp(const Employee &l, const Employee &r);
+
+
+    friend std::ostream& operator<<(std::ostream& out, const Employee& employee);
+
+    void setName(const std::string &name);
+
+    void setId(int id);
+
+    void setSalary(int salary);
 };
+
+Employee getDataEmployee();
+
+bool comp(const Employee &l, const Employee &r);
 
 
 #endif //UNTITLED_EMPLOYEE_H

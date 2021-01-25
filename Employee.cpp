@@ -1,9 +1,9 @@
 //
 // Created by linux-user on 22.01.2021.
 //
-
+#include <iostream>
 #include "Employee.h"
-
+using namespace std;
 
 Employee::Employee(int id, std::string name, int salary, int seniority, Prof professsion) {
     this->id = id;
@@ -50,12 +50,37 @@ void Employee::setProfesssion(Prof professsion) {
     Employee::professsion = professsion;
 }
 
-std::string Employee::getName() {
+std::string Employee::getName() const {
     return name;
 }
 
+bool comp(const Employee &l, const Employee &r) {
+    return l.getSalary() < r.getSalary();
+}
 
+std::ostream& operator<<(std::ostream& out, const Employee& employee){
+    out << employee.getSeniority();
+    return out;
+}
 
-bool Employee::comp(const Employee &l, const Employee &r) {
-    return l.getId() < r.getId();
+Employee getDataEmployee() {
+    std::string name;
+    int salary;
+    int seniority;
+    int professsion;
+
+    cout << "name: ";
+    cin >> name;
+
+    cout << "salary: ";
+    cin >> salary;
+
+    cout << "seniority: ";
+    cin >> seniority;
+
+    cout << "professsion: ";
+    cin >> professsion;
+
+    Employee emp(0, name, salary, seniority, Prof(professsion));
+    return emp;
 }

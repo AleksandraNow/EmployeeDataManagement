@@ -29,13 +29,14 @@ public:
 
     void displayEmployeeByCharacter(std::string name);
 
+    void editEmployee(int a, int b);
+
     void sortEmp();
 
 
-    void editEmployee(int a, int b);
-
-
     typedef std::map<Prof, std::string> ProfMap;
+
+
 };
 
 

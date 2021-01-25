@@ -6,35 +6,34 @@
 #include <fstream>
 #include "EmployeeList.h"
 #include "Employee.h"
+#include <algorithm>
 
 using namespace std;
 
-
-//dodanie pracownika
 void EmployeeList::addEmployee(Employee e) {
     vector.push_back(e);
 }
 
-//wyswietelnie listy
 void EmployeeList::displayEmployee() {
-    ProfMap employeeMap;
-    employeeMap.insert(ProfMap::value_type(architect, "architect"));
+    std::map<Prof, std::string> employeeMap;
+    //employeeMap.insert(ProfMap::value_type(architect, "architect"));
     employeeMap.insert(ProfMap::value_type(seller, "seller"));
 
-    for (auto &element : vector) {
-        int id = element.getId();
+    employeeMap[architect] = "architect";
+
+    //for (auto &element : vector) {
+    for (size_t i = 0; i < vector.size(); ++i) {
+        Employee &element = vector[i];
+
         int salary = element.getSalary();
         int seniority = element.getSeniority();
         Prof profession = element.getProfesssion();
         std::string name = element.getName();
-        std::cout << "id: " << id << " name: " << name << " salary: " << salary << " profession:"
+        std::cout << "id: " << i << " name: " << name << " salary: " << salary << " profession:"
                   << employeeMap[profession]
                   << " seniority: " << seniority << std::endl;
     }
-
-
 }
-
 
 void EmployeeList::editEmployee(int a, int b) {
     for (auto &element : vector) {
@@ -51,7 +50,6 @@ void EmployeeList::editEmployee(int a, int b) {
     }
 }
 
-//wyswietlenie powyzej sal
 void EmployeeList::displayEmployeeAboveSalary(int number) {
     ProfMap employeeMap;
     employeeMap.insert(ProfMap::value_type(architect, "architect"));
@@ -71,8 +69,6 @@ void EmployeeList::displayEmployeeAboveSalary(int number) {
     }
 }
 
-
-//wyswietlenie ponizej sal
 void EmployeeList::displayEmployeeBelowSalary(int number) {
     for (auto &element : vector) {
         if (element.getSalary() < number) {
@@ -88,7 +84,6 @@ void EmployeeList::displayEmployeeBelowSalary(int number) {
     }
 }
 
-//na podst okres cechy
 void EmployeeList::displayEmployeeByCharacter(std::string name) {
     for (auto &element : vector) {
         if (element.getName() == name) {
@@ -104,32 +99,35 @@ void EmployeeList::displayEmployeeByCharacter(std::string name) {
     }
 }
 
-//usuwanie pracownika
 void EmployeeList::deleteEmployee(int number) {
     if (number >= vector.size()) {
         return;
     }
-    vector.erase(vector.begin() + number);
+    vector.erase(vector.begin() + number - 1);
 }
 
-//zapis do pliku
 void EmployeeList::saveDataToFile(std::string path) {
     std::ofstream out;
     out.open(path, std::ios::out);
     if (!out.is_open()) {
         return;
     }
-
+/*
     for (auto &element : vector) {
         if (!(out << element.getId() << " " << element.getName() << " " << element.getSalary() << " "
                   << element.getSeniority() << " " << element.getProfesssion() << "\n")) {
             return;
         }
     }
+*/
+    for (size_t i = 0; i < vector.size(); ++i) {
+        out << (i + 1) << ". " << vector[i] << "\n";
+        out << (i + 1) << ". " << vector[i].getId() << "\n";
+    }
+
 
 }
 
-//odczyt z pliku
 void EmployeeList::readDataFromFile(std::string path) {
     int a, b;
     std::ifstream odczyt(path);
@@ -147,15 +145,7 @@ void EmployeeList::readDataFromFile(std::string path) {
 }
 
 
-/*
 void EmployeeList::sortEmp() {
-    for (auto &element : vector) {
-        sort(vector.begin(), vector.end(), Employee::comp());
-        int id = element.getId();
-        std::string name = element.getName();
-        std::cout << id << " " << name << std::endl;
-    }
-    sort(vector.begin(), vector.end(), comp);
+    std::sort(vector.begin(), vector.end(), comp);
 }
 
-*/

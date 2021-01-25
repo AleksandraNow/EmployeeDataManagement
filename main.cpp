@@ -38,35 +38,17 @@ int main() {
 
         switch (choice) {
             case 1: {
-
-                cout << "ID: ";
-                cin >> id;
-
-                cout << "name: ";
-                cin >> name;
-
-                cout << "salary: ";
-                cin >> salary;
-
-                cout << "seniority: ";
-                cin >> seniority;
-
-                cout << "professsion: ";
-                cin >> prof;
-
-                Employee emp(id, name, salary, seniority, Prof(prof));
-
+                Employee emp = getDataEmployee();
                 lista.addEmployee(emp);
                 break;
-
             }
-
             case 2:
                 lista.displayEmployee();
                 break;
-
             case 3:
-                lista.deleteEmployee(1);
+                cout << "id: ";
+                cin >> id;
+                lista.deleteEmployee(id);
                 break;
             case 4:
                 cout << "name: ";
@@ -83,9 +65,9 @@ int main() {
                 cin >> salary;
                 lista.displayEmployeeBelowSalary(salary);
                 break;
-                /*case 7:
-                    lista.sortEmp();
-*/
+            case 7:
+                lista.sortEmp();
+                break;
             case 8:
                 cout << "Path do save data: ";
                 cin >> path;

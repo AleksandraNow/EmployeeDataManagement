@@ -6,11 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/home/linux-user/CLionProjects/untitled/Employee.cpp
+iostream
+-
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
+
 /home/linux-user/CLionProjects/untitled/Employee.h
 string
 -
 Prof.h
 /home/linux-user/CLionProjects/untitled/Prof.h
+
+/home/linux-user/CLionProjects/untitled/EmployeeList.cpp
+iostream
+-
+fstream
+-
+EmployeeList.h
+/home/linux-user/CLionProjects/untitled/EmployeeList.h
+Employee.h
+/home/linux-user/CLionProjects/untitled/Employee.h
+algorithm
+-
 
 /home/linux-user/CLionProjects/untitled/EmployeeList.h
 vector
